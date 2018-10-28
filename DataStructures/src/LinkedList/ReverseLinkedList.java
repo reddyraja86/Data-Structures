@@ -13,6 +13,8 @@ public class ReverseLinkedList {
 			currentNode = nextNode;
 		}
 		
+		currentNode.nextNode = prevNode;
+		
 		head.nextNode= currentNode;
 		
 		
