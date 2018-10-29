@@ -24,6 +24,12 @@ public class TestLinkedList {
 		l.delete(2);
 
 		printLinkedList(l);
+		
+		System.out.println("Recursion");
+		
+		ReverseLinkedList r1 = new ReverseLinkedList();
+		r1.reverse(l.head, null, l.head.nextNode);
+		printLinkedList(l);
 
 	}
 
