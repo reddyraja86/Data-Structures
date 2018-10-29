@@ -92,6 +92,13 @@ public class LinkedListRaju {
 	
 	}
 
+	/**
+	 * 
+	 * @param index element index
+	 * @return Node value in index
+	 * 
+	 * O(n) as we need to navigate through all the elements
+	 */
 	public int get(int index) {
 		Node currentNode = head;
 
@@ -106,7 +113,50 @@ public class LinkedListRaju {
 	}
 	
 	
-	//TODO addFirst(e);	addLast(e); implementations
+
+	/**
+	 *  @param element data we need to store
+	 *  
+	 *  O(1) constant time
+	 */
+	public void addFirst(int element) {
+		
+		Node newFirstNode = new  Node();
+		newFirstNode.data = element;
+		
+		//Get the first Node from head element
+		
+		//Remove the link
+		Node oldFirstNode = head.nextNode;
+		
+		//Update first node
+		head.nextNode = newFirstNode;
+		
+		//Update head node with the new First node
+		newFirstNode.nextNode = oldFirstNode;
+		
+	}
+	
+	/**
+	 * 
+	 * @param index node index to be deleted
+	 * 
+	 * O(n) if the index is last element
+	 */
+	public void delete(int index) {
+		
+		Node currentNode = head.nextNode;
+		Node prevNode = head;
+		
+		int count =0;
+		while (currentNode.nextNode!=null &&  count < index) {
+			prevNode = currentNode;
+			currentNode = currentNode.nextNode;
+			count++;
+		}
+		size--;
+		prevNode.nextNode = currentNode.nextNode;
+	}
 	
 	
 	
