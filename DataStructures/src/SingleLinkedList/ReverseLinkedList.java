@@ -42,7 +42,9 @@ public class ReverseLinkedList {
 	
 	//TODO: Print the elements in reverse order using recursion
 	
+	//TODO : Check whether the linked list is circular or not
 	
+	//TODO : Check  if linked list contains loop Floyd Cycle Detection algorithm
 	
 	
 

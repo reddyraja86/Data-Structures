@@ -144,11 +144,12 @@ public class LinkedListRaju {
 	 * O(n) if the index is last element
 	 */
 	public void delete(int index) {
-		
+		//TODO : THis will fail when Linked list doesnt have any nodes we are 
 		Node currentNode = head.nextNode;
 		Node prevNode = head;
 		
 		int count =0;
+		//TODO : This will fail incase of empty list
 		while (currentNode.nextNode!=null &&  count < index) {
 			prevNode = currentNode;
 			currentNode = currentNode.nextNode;
@@ -159,6 +160,6 @@ public class LinkedListRaju {
 	}
 	
 	
-	
+	//TODO : Need to implement Remove method
 
 }
