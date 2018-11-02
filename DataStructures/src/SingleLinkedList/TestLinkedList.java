@@ -33,7 +33,7 @@ public class TestLinkedList {
 		*/
 		
 		LinkedListRaju cycle = new LinkedListRaju();
-		ReverseLinkedList r = new ReverseLinkedList();
+		CycleDetection r = new CycleDetection();
 		//Creating a Circle here in Lined List
 		cycle.add(0);
 		cycle.add(1);
