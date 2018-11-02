@@ -44,6 +44,7 @@ public class TestLinkedList {
 		cycle.getNode(5).nextNode=cycle.getNode(2);
 		
 		r.cycleDetection(cycle.head,cycle);
+		r.cycleDetection(cycle.head);
 
 	}
 

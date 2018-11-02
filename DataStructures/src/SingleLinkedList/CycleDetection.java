@@ -1,6 +1,5 @@
 package SingleLinkedList;
 
-import com.sun.xml.internal.bind.v2.util.FatalAdapter;
 
 public class CycleDetection {
 
@@ -35,6 +34,7 @@ public class CycleDetection {
 				earlyNode = lazyNode.nextNode;
 				early = early+2;
 				
+				
 				if(early>=size){
 					early = size- early;
 				}
@@ -60,7 +60,8 @@ public class CycleDetection {
 				fast_ptr = fast_ptr.nextNode.nextNode;
 				
 				if(slow_ptr == fast_ptr){
-					System.out.println("===========LOOP DETECTED ==============="+slow_ptr.data);
+					System.out.println("===========LOOP DETECTED ==============="+fast_ptr.data);
+					break;
 				}
 					
 			}
