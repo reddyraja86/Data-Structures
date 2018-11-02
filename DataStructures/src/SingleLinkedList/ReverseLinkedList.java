@@ -61,9 +61,7 @@ public class ReverseLinkedList {
 	
 	//TODO : Check whether the linked list is circular or not
 	
-	//TODO : Check  if linked list contains loop Floyd Cycle Detection algorithm
 	
 	
 
 }
-;

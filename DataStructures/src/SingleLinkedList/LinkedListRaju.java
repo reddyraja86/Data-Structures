@@ -113,6 +113,21 @@ public class LinkedListRaju {
 	}
 	
 	
+	//Updates this to test the cycle in linked list Need the node object here 
+	
+	public Node getNode(int index) {
+		Node currentNode = head;
+
+		int dataIndex = 0;
+		while(currentNode.nextNode!= null && dataIndex<=index) {
+			currentNode = currentNode.nextNode;
+			dataIndex++;
+		}
+		
+		return currentNode;
+
+	}
+	
 
 	/**
 	 *  @param element data we need to store
