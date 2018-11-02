@@ -54,8 +54,9 @@ public class DoubleLinkedList {
 		}
 		//When the Linked List contains some elements other than one
 		else{
-			Node prev = tail.prev;
-			prev.next = node;
+			node.prev = tail;
+			tail.next = node;
+	
 		}
 		tail = node;
 		size++;
@@ -93,7 +94,23 @@ public class DoubleLinkedList {
 			
 	}
 
+	/**
+	 * 
+	 */
 	
+	public int get(int index){
+		Node currentNode = head;
+		int count = 0;
+		
+		//Navigate till the current Node previous Node
+		while (currentNode.next!= null && count<=index){
+			currentNode = currentNode.next;
+			count++;
+		}
+		
+		
+		return currentNode.data;
+	}
 	
 	
 	
