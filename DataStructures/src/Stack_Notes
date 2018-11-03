@@ -1,0 +1,33 @@
+Stack 
+
+	LIFO Last in First out implementation  
+
+	Avaialble methods :
+ 		push()  Insert element at top
+ 		pop()	Removes element at the top
+ 		peek()  Returns the element at the top 
+ 		isEmpty() Returns true if stack is empty, else false.
+
+  	Time complexity will O(1) for all the above methods
+  	
+ Different ways of implementing it
+ 
+ 	Arrays     
+ 	LinkedList
+
+
+ Array : As the Array is of limited size when it fills up we need to copy them again to a new Array this is not efficient.
+ 
+ LinkedList : Grows Dynamically 
+ 
+ 				We can use single Linked List
+ 				
+ 					Add the head element 
+ 						When ever a new node added add it to the head.next element
+ 						When we pop remove the element after head
+ 						When we  peek get the element after head
+ 						
+ 						
+ 
+ 
+  	

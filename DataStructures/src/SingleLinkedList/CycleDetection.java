@@ -3,7 +3,7 @@ package SingleLinkedList;
 
 public class CycleDetection {
 
-	//TODO : Check  if linked list contains loop Floyd Cycle Detection algorithm
+	
 	
 		/**
 		 * 
@@ -22,7 +22,7 @@ public class CycleDetection {
 			
 			int lazy = 0,early = 0;
 			
-			//TODO : Implement without the size of the Linked List
+			
 			int size = l.size;
 			
 			Node lazyNode=head ,earlyNode=head;
@@ -41,15 +41,16 @@ public class CycleDetection {
 				
 			}
 			
-			System.out.println("========= Detected a Circle At ==========="+lazy);
+			System.out.println("========= Detected a Circle At Index==========="+lazy);
 			
-			
+			System.out.println(l.get(lazy));
 		}
 		
 		
-		
+		//TODO : THIS IS NOT WORKING
+		//TODO : Remove the loops in Linked List
 		/**
-		 * Better Approach As per the Documentation
+		 * Better Approach As per the Documentation of Floyds Algorithm
 		 * 
 		 */
 		public void cycleDetection(Node head){
@@ -61,10 +62,11 @@ public class CycleDetection {
 				
 				if(slow_ptr == fast_ptr){
 					System.out.println("===========LOOP DETECTED ==============="+fast_ptr.data);
-					break;
+					return;
 				}
 					
 			}
+			
 		}
 		
 		

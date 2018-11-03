@@ -41,10 +41,22 @@ public class TestLinkedList {
 		cycle.add(3);
 		cycle.add(4);
 		cycle.add(5);
-		cycle.getNode(5).nextNode=cycle.getNode(2);
+		cycle.getNode(5).nextNode=cycle.getNode(1);
 		
 		r.cycleDetection(cycle.head,cycle);
 		r.cycleDetection(cycle.head);
+		
+		LinkedListRaju llist = new LinkedListRaju(); 
+
+		llist.add(20); 
+		llist.add(4); 
+		llist.add(15); 
+		llist.add(10); 
+		
+		/*Create loop for testing */
+		llist.head.nextNode.nextNode.nextNode.nextNode = llist.head; 
+		
+		r.cycleDetection(llist.head);
 
 	}
 
