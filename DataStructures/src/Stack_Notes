@@ -30,4 +30,22 @@ Stack
  						
  
  
+ Infix,Prefix And Postfix
+ 
+ 	Operator precedence 
+ 		1) Brackets () or  {}
+ 		2) Exponentials from right to left
+ 		3) multiplication and Division left to right
+ 		4) Subtraction and Addition  left to right
+ 		
+ 
+  Examples 
+  	
+  
+ 
+ 	
+ 		
+ 		
+ 		
+ 
   	
