@@ -40,8 +40,38 @@ Stack
  		
  
   Examples 
+  	a+(b*c) --- In fix			1+(2*3)	
+  	a+(bc*)
+  	abc*+ --- Post Fix
+  	
+  	a+(b*c) --- In fix
+  	a+*(bc)
+  	+a*bc 	--- Prefix
+  	
+  	
+  Solving the Prefix expression :
+  
+    We can solve post fix expression by using stacks 
+    
+    	1) Read the expression from left to right
+    	2) If it is number add it to the stack
+    	3) else it is an operator then pop the first two elements and do the operation with those number and pust the result in to the Stack
+    	4) Once the expression is resolved then pop the result from stack
+    	
+    We can solve pre fix expression by using stacks
+    	Same as the above but need to read the expression from right to left
+    	
+    	
+    
+    
+    
+  
   	
   
+  	
+  	
+  	
+  	
  
  	
  		

@@ -40,6 +40,16 @@ public class TestStack {
 		System.out.println(b.checkBalancedParanthesis());	
 		
 		
+		/**
+		 * 	Solve PostFix Expression
+		 */
+		
+		SolvePostfixExpression postFix  = new SolvePostfixExpression("123*+");
+		System.out.println(postFix.solvePrefixExpression());
+		
+		SolvePrefixExpression preFix = new SolvePrefixExpression("+1*23");
+		System.out.println(preFix.solvePrefixExpression());
+		
 	}
 
 }
