@@ -51,7 +51,6 @@ public class Stack {
 	 * pop() will remove the Last inserted node
 	 */
 	public int pop() {
-		
 		if(size==0) {
 			System.out.println("===NOTHING TO REMOVE========");
 		}

@@ -62,7 +62,10 @@ Stack
     	Same as the above but need to read the expression from right to left
     	
     	
-    
+   
+   Resolve Infix to Post fix :
+   
+   Resolve Infix to Pre fix : 
     
     
   
