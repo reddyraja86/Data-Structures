@@ -1,0 +1,25 @@
+Tree Data Structure :
+
+  Tree is a hierarchical DataStructure.
+  
+ 
+ Binary Tree :
+  It is a Data Structure where every node will have at most 2 children.
+  
+ Binary Search Tree :
+  It is a Binary tree will Left child will have lesser value and right child will have more value.
+  
+  We can search the element in BST in O(logn)
+   
+      we are reducing the search criteria
+      			 n/2 -- n/4 -- n/8
+      			 n/2^k = 1
+      			 n= 2^k
+      			 k = log(n)
+     
+     
+      
+      									 
+      		
+  
+   
