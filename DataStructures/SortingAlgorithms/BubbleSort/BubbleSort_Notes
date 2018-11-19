@@ -1,0 +1,14 @@
+Bubble Sort :
+
+	We will iterate through all the values in array
+		Compare the adjescent values 
+		Swap accordingly
+		By the end of first iteration last oject will be sorted 
+	Now take remaining array except the last object and follow the above process
+	
+	Time complexity O(n^2)
+	This is in-place algorithm  no additional memory required
+	
+		
+		
+	
