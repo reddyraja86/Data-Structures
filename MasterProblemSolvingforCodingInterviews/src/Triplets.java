@@ -13,7 +13,7 @@ public class Triplets {
      * find the remaining sum (ie twopaisum = Sum-arr[i] )
      * 
      * Time complexity
-     * SOrting O(nlong) + pair sum for all the elements O(n^2)
+     * Sorting O(nlong) + pair sum for all the elements O(n^2)
      */
 
     private static void triplets(int arr[], int sumNeeded) {
