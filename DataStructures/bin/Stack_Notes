@@ -1,0 +1,84 @@
+Stack 
+
+	LIFO Last in First out implementation  
+
+	Avaialble methods :
+ 		push()  Insert element at top
+ 		pop()	Removes element at the top
+ 		peek()  Returns the element at the top 
+ 		isEmpty() Returns true if stack is empty, else false.
+
+  	Time complexity will O(1) for all the above methods
+  	
+ Different ways of implementing it
+ 
+ 	Arrays     
+ 	LinkedList
+
+
+ Array : As the Array is of limited size when it fills up we need to copy them again to a new Array this is not efficient.
+ 
+ LinkedList : Grows Dynamically 
+ 
+ 				We can use single Linked List
+ 				
+ 					Add the head element 
+ 						When ever a new node added add it to the head.next element
+ 						When we pop remove the element after head
+ 						When we  peek get the element after head
+ 						
+ 						
+ 
+ 
+ Infix,Prefix And Postfix
+ 
+ 	Operator precedence 
+ 		1) Brackets () or  {}
+ 		2) Exponentials from right to left
+ 		3) multiplication and Division left to right
+ 		4) Subtraction and Addition  left to right
+ 		
+ 
+  Examples 
+  	a+(b*c) --- In fix			1+(2*3)	
+  	a+(bc*)
+  	abc*+ --- Post Fix
+  	
+  	a+(b*c) --- In fix
+  	a+*(bc)
+  	+a*bc 	--- Prefix
+  	
+  	
+  Solving the Prefix expression :
+  
+    We can solve post fix expression by using stacks 
+    
+    	1) Read the expression from left to right
+    	2) If it is number add it to the stack
+    	3) else it is an operator then pop the first two elements and do the operation with those number and pust the result in to the Stack
+    	4) Once the expression is resolved then pop the result from stack
+    	
+    We can solve pre fix expression by using stacks
+    	Same as the above but need to read the expression from right to left
+    	
+    	
+   
+   Resolve Infix to Post fix :
+   
+   Resolve Infix to Pre fix : 
+    
+    
+  
+  	
+  
+  	
+  	
+  	
+  	
+ 
+ 	
+ 		
+ 		
+ 		
+ 
+  	

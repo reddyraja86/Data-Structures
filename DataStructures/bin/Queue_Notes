@@ -1,0 +1,16 @@
+Queue :
+
+  Queue is First in First out implementation
+  
+  Operations in Queue :
+  
+  	push(),pop(),peek(),isEmpty() this will take O(1) constant time to solve
+  	
+  	
+  we can implement Queue by using Arrays or Linked List
+  
+  By using Linked List :
+  
+    We have to maintain head and tail pointers 
+    In Push method we will add the object to the tail
+       Pop  method we will remove from the head

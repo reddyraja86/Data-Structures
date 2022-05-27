@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -46,6 +47,7 @@ public class ArrayProducts {
         // Your code here
         for (int i = 0; i < A.length; i++) {
             Set<Integer> keys = values.keySet();
+
             if (keys.contains(A[i])) {
                 values.put(A[i], values.get(A[i] + 1));
             } else {
