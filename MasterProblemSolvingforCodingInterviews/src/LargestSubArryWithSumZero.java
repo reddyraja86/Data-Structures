@@ -36,7 +36,7 @@ public class LargestSubArryWithSumZero {
         System.out.println(finalLength);
     }
 
-    static void approachOne(int[] a, int k) {
+    static void approachOne(int[] arr, int k) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         hm.put(0, 0);
         int length = 0;
