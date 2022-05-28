@@ -1,9 +1,3 @@
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
-import javafx.scene.SnapshotParameters;
 
 public class ArrayProducts {
     public static void main(String[] args) {
@@ -42,34 +36,9 @@ public class ArrayProducts {
 
     }
 
-    static boolean check(long A[], long B[], int N) {
-        Map<Integer, Integer> values = new HashMap<Integer, Integer>();
-        // Your code here
-        for (int i = 0; i < A.length; i++) {
-            Set<Integer> keys = values.keySet();
-
-            if (keys.contains(A[i])) {
-                values.put(A[i], values.get(A[i] + 1));
-            } else {
-                values.put(A[i], 1);
-            }
-        }
-        for (int i = 0; i < B.length; i++) {
-            Integer key = values.get(B[i]);
-            if (key == null || key == 0) {
-                return false;
-            } else {
-                values.put(B[i], key - 1);
-            }
-        }
-
-        return true;
-
-    }
-
     void zigZag(int arr[], int n) {
         for (int i = 0; i <= arr.length - 3; i++) {
-            int small, medium, large;
+            int small = 0, medium = 0, large = 0;
             if (arr[i] < arr[i + 1]) {
                 small = arr[i];
                 medium = arr[i + 1];
