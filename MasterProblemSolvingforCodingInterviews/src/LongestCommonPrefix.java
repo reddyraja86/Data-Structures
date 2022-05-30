@@ -50,4 +50,5 @@ public class LongestCommonPrefix {
         System.out.println(result);
         return result;
     }
+
 }
