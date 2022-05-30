@@ -34,7 +34,7 @@ public class FindAllPairsWithaGivenSum {
     static pair[] allPairs(long A[], long B[], long N, long M, long X) {
         // Your code goes here
         List<pair> l = new ArrayList<pair>();
-        Set<Integer> s = new HashSet<Integer>();
+        Set<Long> s = new HashSet<Long>();
         Arrays.sort(A);
         Arrays.sort(B);
         if (N <= M) {
