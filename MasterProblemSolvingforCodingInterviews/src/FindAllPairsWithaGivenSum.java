@@ -42,7 +42,7 @@ public class FindAllPairsWithaGivenSum {
                 s.add(A[i]);
             }
             for (int i = 0; i < B.length; i++) {
-                int val = Math.abs(x - B[i]);
+                long val = Math.abs(X - B[i]);
                 if (s.contains(val)) {
                     if (val < B[i]) {
                         pair p = new pair(val, B[i]);
@@ -59,7 +59,7 @@ public class FindAllPairsWithaGivenSum {
                 s.add(B[i]);
             }
             for (int i = 0; i < A.length; i++) {
-                int val = Math.abs(x - A[i]);
+                long val = Math.abs(X - A[i]);
                 if (s.contains(val)) {
                     if (val < A[i]) {
                         pair p = new pair(val, A[i]);
