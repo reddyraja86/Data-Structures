@@ -14,6 +14,8 @@ Explanation: The merged array looks like
 elements is 11 (5 + 6).
 */
 
+//TO DO :Neeed to solve this problem
+
 public class SumofMiddleElementsOfTwoSortedArrays {
     public static void main(String[] args) {
         int Ar1[] = { 1 };// { 1, 2, 4, 6, 10 };
