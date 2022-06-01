@@ -10,11 +10,11 @@ package StringPrblms;
 
  */
 
-public class Combinatios {
+public class SubSequnces {
 
     public static void main(String[] args) {
         String val = "abc";
-        Combinatios c = new Combinatios();
+        SubSequnces c = new SubSequnces();
         c.findAll("", 0, 3, val);
 
     }
