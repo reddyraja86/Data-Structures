@@ -16,7 +16,24 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        int a[] = { 7, 8, 3, 2, 1 };
+        int a[] = { 4, 19, 8, 5, 7, 3, 1, 2 };
 
+        for (int i = 0; i < a.length; i++) {
+            int smallest = a[i];
+            int index = i;
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[j] < smallest) {
+                    smallest = a[j];
+                    index = j;
+                }
+            }
+            // swap smallest
+            int temp = a[i];
+            a[i] = smallest;
+            a[index] = temp;
+
+        }
+
+        valuesInArray(a);
     }
 }
