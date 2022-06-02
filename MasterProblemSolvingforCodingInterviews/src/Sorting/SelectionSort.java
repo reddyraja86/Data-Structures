@@ -19,18 +19,16 @@ public class SelectionSort {
         int a[] = { 4, 19, 8, 5, 7, 3, 1, 2 };
 
         for (int i = 0; i < a.length; i++) {
-            int smallest = a[i];
-            int index = i;
+            int smallestIndex = i;
             for (int j = i + 1; j < a.length; j++) {
-                if (a[j] < smallest) {
-                    smallest = a[j];
-                    index = j;
+                if (a[j] < a[smallestIndex]) {
+                    smallestIndex = j;
                 }
             }
             // swap smallest
             int temp = a[i];
-            a[i] = smallest;
-            a[index] = temp;
+            a[i] = a[smallestIndex];
+            a[smallestIndex] = temp;
 
         }
 
