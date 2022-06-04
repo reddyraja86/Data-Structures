@@ -1,7 +1,5 @@
 package ApnaCollege.Arrays;
 
-import java.util.Arrays;
-
 /**
  * Write a program to reverse an array or string
  * 
