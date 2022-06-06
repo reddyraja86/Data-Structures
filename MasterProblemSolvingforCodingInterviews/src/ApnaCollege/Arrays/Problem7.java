@@ -32,11 +32,20 @@ package ApnaCollege.Arrays;
 public class Problem7 {
     public static void main(String[] args) {
 
+        int a[] = { 1, 2, 3 };
+        /**
+         * 
+         * 1) find first element where a[i]<a[i+1] temp =a[i]
+         * 2) From right get the first element which is ledd than temp
+         * 3) swap element
+         * 4) reverse a(i+1,last)
+         */
+
         char a[] = { '1', '2', '3', '4' };// { 'a', 'b', 'c', 'd' };
-        findAllcombs(a, "", 0);
+        findAllcombsOfArrayength(a, "", 0);
     }
 
-    static void findAllcombs(char a[], String s, int x) {
+    static void findAllcombsOfArrayength(char a[], String s, int x) {
         if (s.length() == a.length) {
             System.out.println(s);
             return;
@@ -44,7 +53,7 @@ public class Problem7 {
         for (int i = 0; i < a.length; i++) {
             x = x + 1;
             if (!s.contains(a[i] + "")) {
-                findAllcombs(a, s + a[i], x);
+                findAllcombsOfArrayength(a, s + a[i], x);
             }
 
         }
