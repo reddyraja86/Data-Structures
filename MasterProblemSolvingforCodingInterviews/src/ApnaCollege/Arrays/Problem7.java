@@ -30,5 +30,24 @@ package ApnaCollege.Arrays;
  * not have a lexicographical larger rearrangement.
  */
 public class Problem7 {
+    public static void main(String[] args) {
 
+        char a[] = { '1', '2', '3', '4' };// { 'a', 'b', 'c', 'd' };
+        findAllcombs(a, "", 0);
+    }
+
+    static void findAllcombs(char a[], String s, int x) {
+        if (s.length() == a.length) {
+            System.out.println(s);
+            return;
+        }
+        for (int i = 0; i < a.length; i++) {
+            x = x + 1;
+            if (!s.contains(a[i] + "")) {
+                findAllcombs(a, s + a[i], x);
+            }
+
+        }
+
+    }
 }
