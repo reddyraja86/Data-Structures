@@ -23,58 +23,82 @@ package SlidingWindow;
  */
 public class Housing {
     public static void main(String[] args) {
-        int arr[] = { 1, 4, 20, 3, 10, 5 };
-        int k = 33;
+        // int arr[] = { 1, 4, 20, 3, 10, 5 };
+        int arr[] = { 1, 3, 2, 1, 4, 1, 3, 2, 1, 1 };
+        int k = 8;// 33;
         subArrayWithKSum(arr, k);
     }
 
     static void subArrayWithKSum(int[] a, int k) {
-        int sum = a[0];
         int i = 0, j = 0;
-        while (i < a.length && j < a.length) {
-            if (sum == k) {
-                System.out.println("(" + i + "," + j + ")");
-                j++;
-                if (j < a.length) {
-                    sum = sum + a[j];
-                }
+        int total = 0;
 
-            } else if (sum <= k && j < a.length) {
-                j++;
-                sum = sum + a[j];
-            } else if (sum > k && i < a.length) {
-                sum = sum - a[i];
-                i++;
-            }
-        }
+        while (j < a.length) {
 
-    }
-
-    public static void housing(int[] arr, int n, int k) {
-
-        int i = 0;
-        int j = 0;
-        int cs = 0;
-
-        while (j < n) {
-
-            // expand to right
-            cs += arr[j];
+            total = total + a[j];
             j++;
 
-            // remove elements from the left till cs > sum and i<j
-            while (cs > k && i < j) {
-                cs = cs - arr[i];
+            while (total > k && i < a.length) {
+                total = total - a[i];
                 i++;
             }
+            if (total == k) {
+                System.out.println("(" + i + "," + (j - 1) + ")");
 
-            // check if any given point
-            if (cs == k) {
-                // print that window
-                System.out.println(i + " - " + (j - 1));
-                ;
             }
-
         }
+
     }
+
+    /*
+     * static void subArrayWithKSumOne(int[] a, int k) {
+     * int sum = a[0];
+     * int i = 0, j = 0;
+     * while (i < a.length && j < a.length) {
+     * if (sum == k) {
+     * System.out.println("(" + i + "," + j + ")");
+     * j++;
+     * if (j < a.length) {
+     * sum = sum + a[j];
+     * }
+     * 
+     * } else if (sum <= k && j < a.length) {
+     * j++;
+     * sum = sum + a[j];
+     * } else if (sum > k && i < a.length) {
+     * sum = sum - a[i];
+     * i++;
+     * }
+     * }
+     * 
+     * }
+     * 
+     * public static void housing(int[] arr, int n, int k) {
+     * 
+     * int i = 0;
+     * int j = 0;
+     * int cs = 0;
+     * 
+     * while (j < n) {
+     * 
+     * // expand to right
+     * cs += arr[j];
+     * j++;
+     * 
+     * // remove elements from the left till cs > sum and i<j
+     * while (cs > k && i < j) {
+     * cs = cs - arr[i];
+     * i++;
+     * }
+     * 
+     * // check if any given point
+     * if (cs == k) {
+     * // print that window
+     * System.out.println(i + " - " + (j - 1));
+     * ;
+     * }
+     * 
+     * }
+     * }
+     */
 }

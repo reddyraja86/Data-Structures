@@ -40,19 +40,21 @@ public class SubarraySum {
 
     static void approachOne(int a[], int k) {
 
-        int i = 0;
-        int j = 0;
-        int sum = a[i];
-        while (i < a.length && j < a.length) {
-            if (sum == k) {
-                System.out.println(i + "Found" + j);
-                break;
-            } else if (sum < k && j < a.length) {
-                j++;
-                sum = sum + a[j];
-            } else if (sum > k && i < a.length) {
-                sum = sum - a[i];
+        int i = 0, j = 0;
+        int total = 0;
+
+        while (j < a.length) {
+
+            total = total + a[j];
+            j++;
+
+            while (total > k && i < a.length) {
+                total = total - a[i];
                 i++;
+            }
+            if (total == k) {
+                System.out.println("(" + i + "," + (j - 1) + ")");
+
             }
         }
     }
