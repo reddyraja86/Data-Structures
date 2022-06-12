@@ -3,7 +3,7 @@ package ApnaCollege.Arrays;
 public class Problem15 {
     public static void main(String[] args) {
         int[] nums = { 1 };
-        int k = 0;
+        int k = 1;
         int result = -1;
         if (nums.length == 1) {
             result = nums[0] == k ? 0 : -1;
