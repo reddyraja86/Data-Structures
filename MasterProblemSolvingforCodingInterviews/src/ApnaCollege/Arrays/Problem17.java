@@ -1,6 +1,6 @@
 package ApnaCollege.Arrays;
 
-public class Problm17 {
+public class Problem17 {
     public static void main(String[] args) {
         int[] height = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
         int sum = maxArea(height);
