@@ -1,8 +1,9 @@
 package ApnaCollege.Strings;
 
-public class Problem37 {
+public class Problem37_TODO {
     public static void main(String[] args) {
         String s = "babad";
+        findAllcombs(s, "", s.length(), 0);
     }
 
     static String findAllcombs(String s, String result, int length, int i) {
@@ -19,6 +20,6 @@ public class Problem37 {
     }
 
     private static boolean isPalindrom(String s) {
-        return false;
+        return true;
     }
 }
