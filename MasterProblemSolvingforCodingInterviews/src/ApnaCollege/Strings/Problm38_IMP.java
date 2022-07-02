@@ -13,7 +13,7 @@ package ApnaCollege.Strings;
  * Output: 6
  * Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa"
  */
-public class Problm38 {
+public class Problm38_IMP {
     public static void main(String[] args) {
         String s = "aaa";
         String r = "";

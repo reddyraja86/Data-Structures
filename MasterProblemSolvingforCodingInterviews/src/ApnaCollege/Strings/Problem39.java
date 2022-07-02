@@ -1,61 +1,50 @@
 package ApnaCollege.Strings;
 
-import java.util.Collections;
-import java.util.List;
-
 public class Problem39 {
     public static void main(String[] args) {
-
+        int[] nums = { 3, 2, 1 };// { 1, 2, 3, 6, 5, 4 };
+        nextPermutation(nums);
     }
 
-    static void nextPermutation(int a[]) {
+    static void nextPermutation(int[] nums) {
+        int index = nums.length - 2;
+        // find the first pair of two successive numbers nums[index] and nums[index + 1]
+        // from the right, which satisfy nums[index] < [index + 1]
+        while (index >= 0 && nums[index] >= nums[index + 1]) {
+            index--;
+        }
 
-        int tempIndex = 0;
-        // find first element where a[i]<a[i+1] temp =a[i]
-        for (int i = 0; i < a.length - 1; i++) {
-            if (a[i] < a[i + 1]) {
-                tempIndex = i;
-            } else {
-                break;
+        // swap the number nums[index] with the number a[larger] which is just larger
+        // than itself
+        if (index >= 0) {
+            int larger = nums.length - 1;
+            while (larger >= 0 && nums[larger] <= nums[index]) {
+                larger--;
             }
-        }
-        int rightIndex = 0;
-        // From right get the first element which is less than temp
-        for (int i = a.length - 1; i > 0; i--) {
-            if (a[i] > a[tempIndex]) {
-                rightIndex = i;
-                break;
-            }
+            swap(nums, index, larger);
         }
 
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]);
-        }
-        System.out.println();
+        // reverse the numbers following a[index] to get the next smallest lexicographic
+        // permutation
+        reverse(nums, index + 1);
 
-        // swap the elements
-        int temp = a[tempIndex];
-        a[tempIndex] = a[rightIndex];
-        a[rightIndex] = temp;
-
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]);
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
         }
-        System.out.println();
+    }
 
-        // reverse the tempIndex+1 to length
-        tempIndex = tempIndex + 1;
-        int l = a.length - 1;
-        while (tempIndex <= l) {
-            int t = a[l];
-            a[l] = a[tempIndex];
-            a[tempIndex] = t;
-            tempIndex++;
-            l--;
+    static void reverse(int[] nums, int start) {
+        int i = start, j = nums.length - 1;
+        while (i < j) {
+            swap(nums, i, j);
+            i++;
+            j--;
         }
+    }
 
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]);
-        }
+    static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
